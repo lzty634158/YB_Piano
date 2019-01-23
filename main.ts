@@ -174,8 +174,8 @@ namespace YB_Piano {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchButton(value: touch): number {
        
-        let c = touch;
+        let c = value;
         return c;
-}
+    }
     
 }
