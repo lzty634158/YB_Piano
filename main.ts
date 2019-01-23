@@ -188,7 +188,7 @@ namespace YB_Piano {
     }
     
     //% blockId=YB_Piano_TouchSensitivity block="TouchSensitivity|%key %value"
-    //% weight=96
+    //% weight=95
     //% blockGap=10
     //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
@@ -197,5 +197,17 @@ namespace YB_Piano {
         i2cwrite(80, 181 + key, 128 + value);
         //pins.i2cWriteNumber(80, 181 + key, NumberFormat.UInt8BE, true);
         //pins.i2cWriteNumber(80, 128+value, NumberFormat.UInt8BE, false);
+    }
+
+    //% blockId=YB_Piano_TouchSensitivityValue block="TouchSensitivityValue|%key"
+    //% weight=94
+    //% blockGap=10
+    //% color="#17ecc1"
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
+    export function TouchSensitivityValue(key: number): number {
+
+        pins.i2cWriteNumber(80, key + 181, NumberFormat.UInt8BE,false);
+        let a = pins.i2cReadNumber(80, NumberFormat.UInt8BE, false);
+        return a;
     }
 }
