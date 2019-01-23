@@ -184,7 +184,7 @@ namespace YB_Piano {
     //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchSensitivity(key: number, value: number): void {
-        pins.i2cWriteNumber(80, 180 + key, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 181 + key, NumberFormat.UInt8BE, true);
         pins.i2cWriteNumber(80, 128+value, NumberFormat.UInt8BE, false);
     }
 }
