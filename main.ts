@@ -178,4 +178,13 @@ namespace YB_Piano {
         return c;
     }
     
+    //% blockId=YB_Piano_TouchSensitivity block="TouchSensitivity|%value"
+    //% weight=96
+    //% blockGap=10
+    //% color="#17ecc1"
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
+    export function TouchSensitivity(value: number): void {
+        pins.i2cWriteNumber(80, 181, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 128+value, NumberFormat.UInt8BE, false);
+    }
 }
