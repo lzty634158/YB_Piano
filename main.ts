@@ -194,9 +194,9 @@ namespace YB_Piano {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchSensitivity(key: number, value: number): void {
 
-        i2cwrite(80, 181 + key, 128 + value);
-        //pins.i2cWriteNumber(80, 181 + key, NumberFormat.UInt8BE, true);
-        //pins.i2cWriteNumber(80, 128+value, NumberFormat.UInt8BE, false);
+        //i2cwrite(80, 181 + key, 128 + value);
+        pins.i2cWriteNumber(80, 181 + key, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 128 + value, NumberFormat.UInt8BE, false);
     }
 
     //% blockId=YB_Piano_TouchSensitivityValue block="TouchSensitivityValue|%key"
