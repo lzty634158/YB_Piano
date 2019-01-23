@@ -10,10 +10,6 @@ load dependency
 namespace YB_Piano {
 
   
-
-    const PRESCALE = 0xFE;
-
-    let initialized = false;
     let yahStrip: neopixel.Strip;
     
     
