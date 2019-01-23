@@ -91,6 +91,15 @@ namespace YB_Piano {
         YELLOW
     }
     
+
+    function i2cwrite(addr: number, reg: number, value: number) { 
+        let buf = pins.createBuffer(2); 
+        buf[0] = reg; 
+        buf[1] = value; 
+        pins.i2cWriteBuffer(addr, buf); 
+    }  
+         
+        
    
     /**
      * *****************************************************************
@@ -184,7 +193,9 @@ namespace YB_Piano {
     //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchSensitivity(key: number, value: number): void {
-        pins.i2cWriteNumber(80, 181 + key, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 128+value, NumberFormat.UInt8BE, false);
+
+        i2cwrite(80, 181 + key, 128 + value);
+        //pins.i2cWriteNumber(80, 181 + key, NumberFormat.UInt8BE, true);
+        //pins.i2cWriteNumber(80, 128+value, NumberFormat.UInt8BE, false);
     }
 }
