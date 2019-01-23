@@ -151,24 +151,31 @@ namespace YB_Piano {
         }
     }
     
-    //% blockId=YB_Piano_Touch block="Music Touch return|%value"
+    //% blockId=YB_Piano_Touch block="Music Touch return"
     //% weight=97
     //% blockGap=10
     //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
-    export function Touch(value: touch): boolean {
-			let a = 0;
-			let b = 0;
-			let c = 0;
-			pins.i2cWriteNumber(80,8,NumberFormat.UInt8BE,false);
-			a = pins.i2cReadNumber(80, NumberFormat.UInt8BE, true);
-			b = pins.i2cReadNumber(80, NumberFormat.UInt8BE, false);
-			c = (b<<8)|a;
-			if(c==value)
-				return true;
-			else
-				return false;
+    export function Touch(): number {
+        let a = 0;
+        let b = 0;
+        let c = 0;
+        pins.i2cWriteNumber(80,8,NumberFormat.UInt8BE,false);
+        a = pins.i2cReadNumber(80, NumberFormat.UInt8BE, true);
+        b = pins.i2cReadNumber(80, NumberFormat.UInt8BE, false);
+        c = (b<<8)|a;
+        return c;
     }
     
+    //% blockId=YB_Piano_TouchButton block="Music Button|%value"
+    //% weight=96
+    //% blockGap=10
+    //% color="#17ecc1"
+    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
+    export function Touch(value: touch): number {
+       
+        let c = touch;
+        return c;
+}
     
 }
