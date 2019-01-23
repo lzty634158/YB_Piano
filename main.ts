@@ -6,7 +6,7 @@ load dependency
 "YB_Piano": "file:../pxt-YB_Piano"
 */
 
-//% color="#C814B8" weight=20 icon="\uf11b"
+//% color="#17ecc1" weight=20 icon="\uf001"
 namespace YB_Piano {
 
   

@@ -4,7 +4,7 @@
   "YB_Piano.RGB_Program_Close|block": "关闭七彩灯",  
 
   "YB_Piano.Music_Handle|block": "手柄音乐播放|%index",
-  "YB_Piano.Touch|block": "触摸返回|%value"
+  "YB_Piano.Touch|block": "触摸返回|%value",
   
 
 }
