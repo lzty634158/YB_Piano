@@ -103,7 +103,7 @@ namespace YB_Piano {
     //% blockId=YB_Piano_RGB_Program block="RGB_Program"
     //% weight=99
     //% blockGap=10
-    //% color="#C814B8"
+    //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function RGB_Program(): neopixel.Strip {
          
@@ -116,7 +116,7 @@ namespace YB_Piano {
     //% blockId=YB_Piano_RGB_Program_Close block="RGB_Program_Close"
     //% weight=98
     //% blockGap=10
-    //% color="#C814B8"
+    //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
     export function RGB_Program_Close(): void {
         pins.digitalWritePin(DigitalPin.P1, 0);
@@ -125,9 +125,9 @@ namespace YB_Piano {
     }
     
     //% blockId=YB_Piano_Music_Handle block="Music_Handle|%index"
-    //% weight=92
+    //% weight=98
     //% blockGap=10
-    //% color="#C814B8"
+    //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Music_Handle(index: enMusic): void {
         switch (index) {
@@ -154,16 +154,16 @@ namespace YB_Piano {
         }
     }
     
-    //% blockId=YB_Piano_Touch block="Touch|value %value"
-    //% weight=84
+    //% blockId=YB_Piano_Touch block="Music Touch return|%value"
+    //% weight=97
     //% blockGap=10
-    //% color="#C814B8"
+    //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function Touch(value: touch): boolean {
 			let a = 0;
 			let b = 0;
 			let c = 0;
-			pins.i2cWriteNumber(80,8,NumberFormat.Int8BE,false);
+			pins.i2cWriteNumber(80,8,NumberFormat.UInt8BE,false);
 			a = pins.i2cReadNumber(80, NumberFormat.UInt8BE, true);
 			b = pins.i2cReadNumber(80, NumberFormat.UInt8BE, false);
 			c = (b<<8)|a;
