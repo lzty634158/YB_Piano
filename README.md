@@ -1,4 +1,4 @@
-# GHBit
+# YB_Piano
 
 Extension for Yahboom YB_Piano
 
