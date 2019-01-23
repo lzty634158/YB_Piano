@@ -195,8 +195,8 @@ namespace YB_Piano {
     export function TouchSensitivity(key: number, value: number): void {
 
         //i2cwrite(80, 181 + key, 128 + value);
-        pins.i2cWriteNumber(80, 181 + key, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 128 + value, NumberFormat.UInt8BE, false);
+        pins.i2cWriteNumber(80, (181 + key)*256 + (128 + value), NumberFormat.UInt16BE, false);
+        //pins.i2cWriteNumber(80, 128 + value, NumberFormat.UInt8BE, false);
     }
 
     //% blockId=YB_Piano_TouchSensitivityValue block="TouchSensitivityValue|%key"
