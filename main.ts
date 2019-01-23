@@ -45,7 +45,7 @@ namespace YB_Piano {
         CD = 8,
         //% blockId="D" block="D"
         D = 16,
-        //% blockId="DE" block="DF"
+        //% blockId="DE" block="DE"
         DE = 32,
         //% blockId="E" block="E"
         E = 64,
