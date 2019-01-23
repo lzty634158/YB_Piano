@@ -45,8 +45,8 @@ namespace YB_Piano {
         CD = 8,
         //% blockId="D" block="D"
         D = 16,
-        //% blockId="DF" block="DF"
-        DF = 32,
+        //% blockId="DE" block="DF"
+        DE = 32,
         //% blockId="E" block="E"
         E = 64,
         //% blockId="F" block="F"
@@ -65,10 +65,11 @@ namespace YB_Piano {
         B = 8192, 
         //% blockId="L" block="L"
         L = 2,
+        //% blockId="M" block="M"
+        M = 1,
         //% blockId="H" block="H"
         H = 16384,
-        //% blockId="M" block="M"
-        M = 1
+       
     }
     
     export enum enColor {
