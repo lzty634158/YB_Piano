@@ -172,7 +172,7 @@ namespace YB_Piano {
     //% blockGap=10
     //% color="#17ecc1"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
-    export function Touch(value: touch): number {
+    export function TouchButton(value: touch): number {
        
         let c = touch;
         return c;
