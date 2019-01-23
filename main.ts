@@ -117,8 +117,8 @@ namespace YB_Piano {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
     export function RGB_Program_Close(): void {
         pins.digitalWritePin(DigitalPin.P1, 0);
-        GHBit.RGB_Program().clear();
-        GHBit.RGB_Program().show();
+        YB_Piano.RGB_Program().clear();
+        YB_Piano.RGB_Program().show();
     }
     
     //% blockId=YB_Piano_Music_Handle block="Music_Handle|%index"
