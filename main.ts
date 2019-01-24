@@ -217,7 +217,6 @@ namespace YB_Piano {
         pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
         pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
         pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
         pins.i2cWriteNumber(80, 0x0E, NumberFormat.UInt8BE, false);
 
 
