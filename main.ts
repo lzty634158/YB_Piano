@@ -194,8 +194,33 @@ namespace YB_Piano {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchSensitivity(key: number, value: number): void {
 
-        i2cwrite(80, 181 + key, 128 + value);
-        //pins.i2cWriteNumber(80, (181 + key)*256 + (128 + value), NumberFormat.UInt16BE, false);
+        //i2cwrite(80, 181 + key, 128 + value);
+        pins.i2cWriteNumber(80, 0xB0, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x83, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0xf3, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x98, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x0E, NumberFormat.UInt8BE, false);
+
+
         //pins.i2cWriteNumber(80, 128 + value, NumberFormat.UInt8BE, false);
     }
 
