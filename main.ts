@@ -196,28 +196,33 @@ namespace YB_Piano {
 
         //i2cwrite(80, 181 + key, 128 + value);
         pins.i2cWriteNumber(80, 0xB0, NumberFormat.UInt8BE, true);
+
         pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
         pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
         pins.i2cWriteNumber(80, 0x83, NumberFormat.UInt8BE, true);
         pins.i2cWriteNumber(80, 0xf3, NumberFormat.UInt8BE, true);
         pins.i2cWriteNumber(80, 0x98, NumberFormat.UInt8BE, true);
+
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
         pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x0E, NumberFormat.UInt8BE, false);
+
+        pins.i2cWriteNumber(80, 0x8E, NumberFormat.UInt8BE, false);
 
 
         //pins.i2cWriteNumber(80, 128 + value, NumberFormat.UInt8BE, false);
@@ -230,7 +235,7 @@ namespace YB_Piano {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchSensitivityValue(key: number): number {
 
-        pins.i2cWriteNumber(80, key + 181, NumberFormat.UInt8BE,false);
+        pins.i2cWriteNumber(80, key + 0xB5, NumberFormat.UInt8BE,false);
         let a = pins.i2cReadNumber(80, NumberFormat.UInt8BE, false);
         return a;
     }
