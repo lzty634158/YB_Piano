@@ -194,35 +194,61 @@ namespace YB_Piano {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchSensitivity(key: number, value: number): void {
 
+        let buf = pins.createBuffer(22); 
+        buf[0] = 0x00; 
+        buf[1] = 0x00; 
+        buf[2] = 0x83;
+        buf[3] = 0xf3;
+        buf[4] = 0x98;
+        buf[5] = 0x08;
+        buf[6] = 0x08;
+        buf[7] = 0x08;
+        buf[8] = 0x08;
+        buf[9] = 0x08;
+        buf[10] = 0x08;
+        buf[11] = 0x08;
+        buf[12] = 0x08;
+        buf[13] = 0x08;
+        buf[14] = 0x08;
+        buf[15] = 0x08;
+        buf[16] = 0x08;
+        buf[17] = 0x08;
+        buf[18] = 0x08;
+        buf[19] = 0x08;
+        buf[20] = 0x08;
+        buf[21] = 0x8e;
+
+        pins.i2cWriteBuffer(0x50, buf); 
+
         //i2cwrite(80, 181 + key, 128 + value);
-        pins.i2cWriteNumber(80, 0xB0, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0xB0, NumberFormat.UInt8BE, true);
 
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x83, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0xf3, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x98, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x83, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0xf3, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x98, NumberFormat.UInt8BE, true);
 
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
 
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
 
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
-        pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x08, NumberFormat.UInt8BE, true);
+        // pins.i2cWriteNumber(80, 0x00, NumberFormat.UInt8BE, true);
 
-        pins.i2cWriteNumber(80, 0x8E, NumberFormat.UInt8BE, false);
+        // pins.i2cWriteNumber(80, 0x8E, NumberFormat.UInt8BE, false);
 
 
         //pins.i2cWriteNumber(80, 128 + value, NumberFormat.UInt8BE, false);
