@@ -216,7 +216,7 @@ namespace YB_Piano {
         buf[18] = 0x08;
         buf[19] = 0x08;
         buf[20] = 0x08;
-        buf[21] = 0x8e;
+        buf[21] = 0xde;
 
         pins.i2cWriteBuffer(0x50, buf); 
 
