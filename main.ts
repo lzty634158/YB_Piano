@@ -205,7 +205,7 @@ namespace YB_Piano {
         c = (b << 8) | a;
         
         if (value == 1) { 
-            if ((c & play) != 0) {
+            if ((c & temp) != 0) {
                 c = c & temp;
             } else if (c & touch.C) {
                 music.ringTone(131);
@@ -236,7 +236,7 @@ namespace YB_Piano {
             }
         }
         else  if (value == 2) { 
-            if ((c & play) != 0) {
+            if ((c & temp) != 0) {
                 c = c & temp;
             } else if (c & touch.C) {
                 music.ringTone(262);
@@ -267,7 +267,7 @@ namespace YB_Piano {
             }
         }
         else  if (value == 3) { 
-            if ((c & play) != 0) {
+            if ((c & temp) != 0) {
                 c = c & temp;
             } else if (c & touch.C) {
                 music.ringTone(523);
