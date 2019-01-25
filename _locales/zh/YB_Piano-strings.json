@@ -7,6 +7,4 @@
   "YB_Piano.Touch|block": "音乐触摸返回",
   "YB_Piano.TouchButton|block" : "音乐按钮|%value",
   "YB_Piano.PlayPiano|block" : "弹钢琴|音调 %value",
-  "YB_Piano.TouchSensitivity|block" : "触摸灵敏度|%key %value",
-  "YB_Piano.TouchSensitivityValue|block": "返回触摸灵敏度|%key",
 }
