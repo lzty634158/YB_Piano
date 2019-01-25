@@ -221,7 +221,7 @@ namespace YB_Piano {
         buf[23] = 0x08;
         buf[24] = 0xde;
 
-        pins.i2cWriteBuffer(0x50, buf); 
+        pins.i2cWriteBuffer(0xA0, buf); 
 
         //i2cwrite(80, 181 + key, 128 + value);
         // pins.i2cWriteNumber(80, 0xB0, NumberFormat.UInt8BE, true);
