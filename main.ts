@@ -169,9 +169,9 @@ namespace YB_Piano {
         let a = 0;
         let b = 0;
         let c = 0;
-        pins.i2cWriteNumber(80,8,NumberFormat.UInt8BE,false);
-        a = pins.i2cReadNumber(80, NumberFormat.UInt8BE, true);
-        b = pins.i2cReadNumber(80, NumberFormat.UInt8BE, false);
+        pins.i2cWriteNumber(0x50,8,NumberFormat.UInt8BE,false);
+        a = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, true);
+        b = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
         c = (b<<8)|a;
         return c;
     }
@@ -194,15 +194,15 @@ namespace YB_Piano {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchSensitivity(key: number, value: number): void {
 
-        let buf = pins.createBuffer(22); 
+        let buf = pins.createBuffer(25); 
         buf[0] = 0x00; 
         buf[1] = 0x00; 
-        buf[2] = 0x83;
-        buf[3] = 0xf3;
-        buf[4] = 0x98;
-        buf[5] = 0x08;
-        buf[6] = 0x08;
-        buf[7] = 0x08;
+        buf[2] = 0x10;
+        buf[3] = 0x83;
+        buf[4] = 0xf3;
+        buf[5] = 0xd8;
+        buf[6] = 0x00;
+        buf[7] = 0x00;
         buf[8] = 0x08;
         buf[9] = 0x08;
         buf[10] = 0x08;
@@ -216,7 +216,10 @@ namespace YB_Piano {
         buf[18] = 0x08;
         buf[19] = 0x08;
         buf[20] = 0x08;
-        buf[21] = 0xde;
+        buf[21] = 0x08;
+        buf[22] = 0x08;
+        buf[23] = 0x08;
+        buf[24] = 0xde;
 
         pins.i2cWriteBuffer(0x50, buf); 
 
