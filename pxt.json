@@ -10,7 +10,7 @@
     "files": [
         "README.md",
         "main.ts",
-        "_locales/zh/YB_Piano-strings.json"
+        "_locales/zh/piano-strings.json"
 
     ],
     "testFiles": [
