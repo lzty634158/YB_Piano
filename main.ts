@@ -128,8 +128,8 @@ namespace piano {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
     export function RGB_Program_Close(): void {
         pins.digitalWritePin(DigitalPin.P1, 0);
-        YB_Piano.RGB_Program().clear();
-        YB_Piano.RGB_Program().show();
+        piano.RGB_Program().clear();
+        piano.RGB_Program().show();
     }
     
     //% blockId=piano_Music_Handle block="Music_Handle|%index"
