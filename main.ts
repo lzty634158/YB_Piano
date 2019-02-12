@@ -232,7 +232,8 @@ namespace YB_Piano {
             } else if (c & touch.B) {
                 music.ringTone(247);
             } else if (c == touch.None) {
-                music.ringTone(0);
+                //music.ringTone(0);
+                pins.digitalWritePin(DigitalPin.P0, 0);
             }
         }
         else  if (value == 2) { 
@@ -263,7 +264,8 @@ namespace YB_Piano {
             } else if (c & touch.B) {
                 music.ringTone(494);
             } else if (c == touch.None) {
-                music.ringTone(0);
+                //music.ringTone(0);
+                pins.digitalWritePin(DigitalPin.P0, 0);
             }
         }
         else  if (value == 3) { 
@@ -294,7 +296,8 @@ namespace YB_Piano {
             } else if (c & touch.B) {
                 music.ringTone(988);
             } else if (c == touch.None) {
-                music.ringTone(0);
+                //music.ringTone(0);
+                pins.digitalWritePin(DigitalPin.P0, 0);
             }
         }
         
