@@ -108,7 +108,7 @@ namespace YB_Piano {
      * @param index
      */
     
-    //% blockId=piano_RGB_Program block="RGB_Program"
+    //% blockId=YB_Piano_RGB_Program block="RGB_Program"
     //% weight=99
     //% blockGap=10
     //% color="#17ecc1"
@@ -121,7 +121,7 @@ namespace YB_Piano {
         return yahStrip;  
     }  
        
-    //% blockId=piano_RGB_Program_Close block="RGB_Program_Close"
+    //% blockId=YB_Piano_RGB_Program_Close block="RGB_Program_Close"
     //% weight=98
     //% blockGap=10
     //% color="#17ecc1"
@@ -132,7 +132,7 @@ namespace YB_Piano {
         YB_Piano.RGB_Program().show();
     }
     
-    //% blockId=piano_Music_Handle block="Music_Handle|%index"
+    //% blockId=YB_Piano_Music_Handle block="Music_Handle|%index"
     //% weight=98
     //% blockGap=10
     //% color="#17ecc1"
@@ -162,7 +162,7 @@ namespace YB_Piano {
         }
     }
     
-    //% blockId=piano_Touch block="Music Touch return"
+    //% blockId=YB_Piano_Touch block="Music Touch return"
     //% weight=97
     //% blockGap=10
     //% color="#17ecc1"
@@ -178,7 +178,7 @@ namespace YB_Piano {
         return c;
     }
     
-    //% blockId=piano_TouchButton block="Music Button|%value"
+    //% blockId=YB_Piano_TouchButton block="Music Button|%value"
     //% weight=96
     //% blockGap=10
     //% color="#17ecc1"
@@ -189,7 +189,7 @@ namespace YB_Piano {
         return c;
     }
 
-    //% blockId=piano_PlayPiano block="Play Piano|tone %value"
+    //% blockId=YB_Piano_PlayPiano block="Play Piano|tone %value"
     //% weight=95
     //% blockGap=10
     //% color="#17ecc1"
