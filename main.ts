@@ -7,7 +7,7 @@ load dependency
 */
 
 //% color="#17ecc1" weight=20 icon="\uf001"
-namespace YB_Piano {
+namespace piano {
 
   
     let yahStrip: neopixel.Strip;
