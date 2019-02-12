@@ -3,7 +3,7 @@
 Copyright (C): 2010-2019, Shenzhen Yahboom Tech
 modified from liusen
 load dependency
-"YB_Piano": "file:../pxt-YB_Piano"
+"YB_Piano": "file:../pxt-YB_Piano"  
 */
 
 //% color="#17ecc1" weight=20 icon="\uf001"
