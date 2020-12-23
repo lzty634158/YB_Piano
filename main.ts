@@ -172,7 +172,7 @@ namespace piano {
         let b = 0;
         let c = 0;
         pins.i2cWriteNumber(0x50,8,NumberFormat.UInt8BE,false);
-        a = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, true);
+        a = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
         b = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
         c = (b<<8)|a;
         return c;
@@ -200,7 +200,7 @@ namespace piano {
         let c = 0;
         let temp = 0;
         pins.i2cWriteNumber(0x50, 8, NumberFormat.UInt8BE,false);
-        a = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, true);
+        a = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
         b = pins.i2cReadNumber(0x50, NumberFormat.UInt8BE, false);
         c = (b << 8) | a;
         
@@ -232,8 +232,8 @@ namespace piano {
             } else if (c & touch.B) {
                 music.ringTone(247);
             } else if (c == touch.None) {
-                //music.ringTone(0);
-                pins.digitalWritePin(DigitalPin.P0, 0);
+                music.ringTone(0);
+                //pins.digitalWritePin(DigitalPin.P0, 0);
             }
         }
         else  if (value == 2) { 
@@ -264,8 +264,8 @@ namespace piano {
             } else if (c & touch.B) {
                 music.ringTone(494);
             } else if (c == touch.None) {
-                //music.ringTone(0);
-                pins.digitalWritePin(DigitalPin.P0, 0);
+                music.ringTone(0);
+                //pins.digitalWritePin(DigitalPin.P0, 0);
             }
         }
         else  if (value == 3) { 
@@ -296,8 +296,8 @@ namespace piano {
             } else if (c & touch.B) {
                 music.ringTone(988);
             } else if (c == touch.None) {
-                //music.ringTone(0);
-                pins.digitalWritePin(DigitalPin.P0, 0);
+                music.ringTone(0);
+                //pins.digitalWritePin(DigitalPin.P0, 0);
             }
         }
         
